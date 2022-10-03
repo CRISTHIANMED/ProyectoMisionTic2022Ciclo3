@@ -42,8 +42,7 @@ public class ExamenServiceImpl implements ExamenService{
         if (examOp.isEmpty()) {
             throw new RuntimeException("El examen no existe");
         }
-        examenRepository.delete(examOp.get());
-       
+        examenRepository.delete(examOp.get());  
     }
 
 

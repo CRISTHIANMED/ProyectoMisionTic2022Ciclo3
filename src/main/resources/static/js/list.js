@@ -65,7 +65,7 @@ function eliminar(cups){
                 icon: "success",
             }).then((OK) => {
                 if(OK) {
-                    location.href="adminlist";
+                    location.href="/adminlist";
                 }
             });
             } else {

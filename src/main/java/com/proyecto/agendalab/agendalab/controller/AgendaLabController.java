@@ -92,9 +92,8 @@ public class AgendaLabController {
 
     @GetMapping("/eliminar/{cups}")
     public String borrarExamen(Model model, @PathVariable Long cups) {
-
         examenService.borrarExamen(cups);
-
+        
         return "redirect:adminlist";
     }
 
