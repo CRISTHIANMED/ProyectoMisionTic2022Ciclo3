@@ -41,7 +41,7 @@ function transformarEnEditable(nodo) {
 
 function anular() {
 
-    window.location.href = "/list";
+    window.location.href = "/adminlist";
 
 }
 

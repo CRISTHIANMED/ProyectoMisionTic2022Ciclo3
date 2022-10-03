@@ -70,7 +70,7 @@ public class AgendaLabController {
         return "adminAgregar";
     }
 
-    @GetMapping(value = { "/list", "/adminlist" })
+    @GetMapping(value = {"/adminlist" })
     public String goToAdminList(Model model) {
         model.addAttribute("list", "Parametrización de exámenes");
 
