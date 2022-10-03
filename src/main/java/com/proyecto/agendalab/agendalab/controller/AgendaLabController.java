@@ -90,7 +90,7 @@ public class AgendaLabController {
         return "adminlist";
     }
 
-    @GetMapping("eliminar/{cups}")
+    @GetMapping("/eliminar/{cups}")
     public String borrarExamen(Model model, @PathVariable Long cups) {
 
         examenService.borrarExamen(cups);
