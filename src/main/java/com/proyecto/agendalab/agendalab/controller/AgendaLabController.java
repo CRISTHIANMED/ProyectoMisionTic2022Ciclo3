@@ -56,7 +56,7 @@ public class AgendaLabController {
 
         examenService.editarExamen(examenInfo);
 
-        return "redirect:/adminList";
+        return "redirect:adminlist";
     }
 
     @GetMapping("/Agregar")
@@ -70,7 +70,7 @@ public class AgendaLabController {
         return "adminAgregar";
     }
 
-    @GetMapping(value = { "/list", "/adminList" })
+    @GetMapping(value = {"adminlist"})
     public String goToAdminList(Model model) {
         model.addAttribute("list", "Parametrización de exámenes");
 
@@ -87,15 +87,14 @@ public class AgendaLabController {
 
         model.addAttribute("examenes", examenes);
 
-        return "/adminList";
+        return "adminlist";
     }
 
     @GetMapping("/eliminar/{cups}")
     public String borrarExamen(Model model, @PathVariable Long cups) {
-
         examenService.borrarExamen(cups);
-
-        return "redirect:/adminList";
+        
+        return "redirect:adminlist";
     }
 
     @GetMapping("/contactenos")

@@ -41,9 +41,40 @@ function transformarEnEditable(nodo) {
 
 function anular() {
 
-    window.location.href = "/list";
+    window.location.href = "/adminlist";
 
 }
+
+function eliminar(cups){    
+        swal({
+            title: "¿Está seguro de eliminar?",
+            text: "Una vez eliminado, no podrá ser recuperado",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+         })
+          .then((OK) => {
+            if (OK) {
+                $.ajax({
+                    url:"/eliminar/"+cups,
+                    success: function(res){
+                    console.log(res);
+                    }
+                });
+              swal("Su examen ha sido eliminado", {
+                icon: "success",
+            }).then((OK) => {
+                if(OK) {
+                    location.href="/adminlist";
+                }
+            });
+            } else {
+              swal("Su examen esta seguro");
+            }
+          });
+    
+        }
+
 
 
 
