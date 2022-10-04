@@ -67,7 +67,7 @@
                             <td th:text="${examen.descripcion}"></td>
                             <td>
                                 <a onclick="transformarEnEditable(this)" class="btn btn-warning">Editar</a>
-                                <a onclick="eliminar([[${examen.cups}]])" class="btn btn-danger">Eliminar</a>
+                                <a onclick="eliminar('${examen.cups}')" class="btn btn-danger">Eliminar</a>
                                 <!--<a th:href="@{/eliminar/}+${examen.cups}" class="btn btn-danger">Eliminar</a> --> 
                             </td>
                         </tr>
@@ -89,7 +89,7 @@
     <script src="vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="https://code.jquery.com/jquery-3.6.1.js"</script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/list.js"></script>
     <script src="js/main.js"></script>
