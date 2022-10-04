@@ -67,7 +67,7 @@
                             <td th:text="${examen.descripcion}"></td>
                             <td>
                                 <a onclick="transformarEnEditable(this)" class="btn btn-warning">Editar</a>
-                                <a onclick="eliminar('${examen.cups}')" class="btn btn-danger">Eliminar</a>
+                                <a onclick="eliminar(this)" class="btn btn-danger">Eliminar</a>
                                 <!--<a th:href="@{/eliminar/}+${examen.cups}" class="btn btn-danger">Eliminar</a> --> 
                             </td>
                         </tr>

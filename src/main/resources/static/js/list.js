@@ -45,7 +45,15 @@ function anular() {
 
 }
 
-function eliminar(cups){    
+function eliminar(nodo){ 
+    var nodoTd = nodo.parentNode; 
+    var nodoTr = nodoTd.parentNode; 
+
+    var nodosEnTr = nodoTr.getElementsByTagName('td');
+
+    var cups = nodosEnTr[0].textContent;
+
+        console.log(cups);   
         swal({
             title: "¿Está seguro de eliminar?",
             text: "Una vez eliminado, no podrá ser recuperado",
